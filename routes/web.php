@@ -36,6 +36,8 @@ use Illuminate\Http\Request;
 //Route::livewire('/register','sign-up');
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+Route::get('/terms', [HomeController::class,'terms'])->name('terms');
+Route::get('/privacy-policy', [HomeController::class,'privacy_policy'])->name('privacy-policy');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');

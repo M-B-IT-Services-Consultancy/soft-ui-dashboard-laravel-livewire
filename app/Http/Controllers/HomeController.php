@@ -22,6 +22,18 @@ class HomeController extends Controller
         //
         return view('front.contact');
     }
+    
+    public function terms()
+    {
+        //
+        return view('front.terms');
+    }
+    
+    public function privacy_policy()
+    {
+        //
+        return view('front.privacy_policy');
+    }
 
     /**
      * Show the form for creating a new resource.
