@@ -32,7 +32,7 @@
                 <!--<h5> </h5>-->
                 <p class="mb-4"><a class="text-danger">Dodgyone.com</a> believes that everyone has the power to shape and improve the world. We do this by providing a powerful, open-to-all review platform where landlords or reviewers can share their experiences with doggy tenants, and help other landlords before they re-let their property to dodgy ones. 
                 </p>
-                
+
 
             </div>
 
@@ -45,13 +45,14 @@
                 <h5>Keep private information private</h5>
                 <p class="mb-4">Your reviews are public, so it is important to be mindful of the information you include. Do not share your own sensitive or personal information, such as your name, phone number, address, email address, or anything else that could be used to track, identify, contact, or impersonate you. It is also not okay to share someone else's sensitive or personal information.</p> 
                 <p class="mb-4"> We want to protect the privacy and safety of everyone who uses our platform. By following these guidelines, you can help us ensure that everyone has a positive experience.</p> 
+                <p>
+
+                    Here are some additional examples of sensitive information that you should not include in your reviews:
+
+                </p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="d-flex align-items-center justify-content-center flex-shrink-0">
-                        <p>
 
-                            Here are some additional examples of sensitive information that you should not include in your reviews:
-
-                        </p>
                         <ul>
                             <li>Social security numbers</li>
                             <li>Credit card numbers</li>
@@ -67,9 +68,10 @@
             <div class="col-lg-12 col-md-12">
                 <h5>The final say</h5>
                 <p class="mb-4">Thank you for your understanding. We appreciate your cooperation in helping us to maintain the integrity of our platform.</p> 
+                <p>Here are some additional things to keep in mind:</p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="d-flex align-items-center justify-content-center flex-shrink-0">
-                        <p>Here are some additional things to keep in mind:</p>
+
                         <ul>
                             <li>These guidelines are subject to change at any time.</li>
                             <li>We reserve the right to remove any review that we deem to be in violation of these guidelines.</li>
