@@ -10,8 +10,8 @@
                 <h1 class="display-3 text-white animated slideInDown">Terms of use</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a class="text-dark" href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a class="text-dark" href="#">Pages</a></li>
+                        <li class="breadcrumb-item"><a class="text-light" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-light" href="#">Pages</a></li>
                         <li class="breadcrumb-item text-white active" aria-current="page">Terms of use</li>
                     </ol>
                 </nav>
@@ -30,7 +30,7 @@
         <div class="row g-4">
             <div class="col-lg-12 col-md-12">
                 <!--<h5> </h5>-->
-                <p class="mb-4"><a class="text-danger">Dodgyone.com</a> believes that everyone has the power to shape and improve the world. We do this by providing a powerful, open-to-all review platform where landlords or reviewers can share their experiences with doggy tenants, and help other landlords before they re-let their property to dodgy ones. 
+                <p class="mb-4"><a class="text-primary">Dodgyone.com</a> believes that everyone has the power to shape and improve the world. We do this by providing a powerful, open-to-all review platform where landlords or reviewers can share their experiences with doggy tenants, and help other landlords before they re-let their property to dodgy ones. 
                 </p>
 
 

@@ -34,6 +34,24 @@ class HomeController extends Controller
         //
         return view('front.privacy_policy');
     }
+    
+    public function about()
+    {
+        //
+        return view('front.about');
+    }
+    
+    public function cookie()
+    {
+        //
+        return view('front.cookie');
+    }
+    
+    public function faq()
+    {
+        //
+        return view('front.faq');
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -38,6 +38,9 @@ Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 Route::get('/terms', [HomeController::class,'terms'])->name('terms');
 Route::get('/privacy-policy', [HomeController::class,'privacy_policy'])->name('privacy-policy');
+Route::get('/cookie', [HomeController::class,'cookie'])->name('cookie');
+Route::get('/about', [HomeController::class,'about'])->name('about');
+Route::get('/faq', [HomeController::class,'faq'])->name('faq');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
