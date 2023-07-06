@@ -141,7 +141,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Dodgy</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">DodgyOne</a>, All Right Reserved.
                         <span class="d-none"><a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a></span>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
@@ -193,7 +193,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="assets/js/soft-ui-dashboard.js"></script>
+    <script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}"></script>
     @livewireScripts
 </body>
 

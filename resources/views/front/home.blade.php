@@ -26,14 +26,14 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid border border-primary position-absolute w-100 h-100" src="{{URL::to('assets/front/img/free-about-us-paper-vector.jpg')}}" alt="" style="object-fit: cover;">
+                        <img class="img-fluid border border-primary rounded position-absolute w-100 h-100" src="{{URL::to('assets/front/img/free-about-us-paper-vector.jpg')}}" alt="" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to <span class="text-primary">Dodgy</span></h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <h1 class="mb-4">Welcome to <span class="text-primary">DodgyOne</span></h1>
+                    <p class="mb-4">We started <a class="text-primary">dodgyone.com</a> after seeing tenants misusing property and disrespecting the contract. It cost almost <i class="text-danger fa fa-pound-sign"></i> <span class="text-danger text-bolder">20,000</span> to get property back from the dodgy tenant who was subletting property to prostitutes. </p>
+<!--                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>-->
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Read Review</p>
