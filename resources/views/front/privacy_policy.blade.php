@@ -10,8 +10,8 @@
                 <h1 class="display-3 text-white animated slideInDown">Privacy Policy</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a class="text-dark" href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a class="text-dark" href="#">Pages</a></li>
+                        <li class="breadcrumb-item"><a class="text-light" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-light" href="#">Pages</a></li>
                         <li class="breadcrumb-item text-white active" aria-current="page">Privacy Policy</li>
                     </ol>
                 </nav>
@@ -30,7 +30,7 @@
         <div class="row g-4">
             <div class="col-lg-12 col-md-12">
                 <h5>Date: 1st July 2023 </h5>
-                <p class="mb-4"><a class="text-danger">Dodgyone.com</a>  Privacy Policy describes how we handle your personal information. By accepting the Privacy Policy and by agreeing to Terms and conditions, you consent to our collection and storage, use and disclosure of your personal information as described below.
+                <p class="mb-4"><a class="text-primary">Dodgyone.com</a>  Privacy Policy describes how we handle your personal information. By accepting the Privacy Policy and by agreeing to Terms and conditions, you consent to our collection and storage, use and disclosure of your personal information as described below.
                     Many parts of our site can be used without the need to provide personal information, however we will need to store certain information about you securely on our servers, for example;</p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="d-flex align-items-center justify-content-center flex-shrink-0">

@@ -3,17 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/StaticSignUp.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_01_090828_create_tenant_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/LaravelExamples/UserProfile.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/nav-profile.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/.gitignore</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/HomeController.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_01_090834_create_tenant_rating_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Tenant.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/reset-password.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/routes/web.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/profile.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/Tenant.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/sidebar.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/.htaccess</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_01_090828_create_tenant_table.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/nav.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Property.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/.env</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/terms.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Tenant.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/front/theme.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/guest/sign-up.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/reset-password.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_01_122132_create_property_table.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/home.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/routes/web.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/tenant.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Auth/ResetPassword.php</file>
         </group>
     </open-files>
 </project-private>
