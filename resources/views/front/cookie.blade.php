@@ -30,7 +30,7 @@
         <div class="row g-4">
             <div class="col-lg-12 col-md-12">
                 <h5>What are cookies? </h5>
-                <p class="mb-4"><a class="text-primary">Cookies are small text files that reside on your computer or other devices and allow websites and other associated services to recognise your devices.
+                <p class="mb-4">Cookies are small text files that reside on your computer or other devices and allow websites and other associated services to recognise your devices.
                         They help companies to do a number of things, including:
                 </p>
             </div>
