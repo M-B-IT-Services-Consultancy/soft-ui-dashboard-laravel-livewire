@@ -4,34 +4,40 @@
 <head>
     <meta charset="utf-8">
     <!--add csp here-->
-    <title>Dodgy || Landlord helping landlord</title>
+    <title>Dodgy | Landlord helping landlord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @cspMetaTag(App\Support\Csp\Policies\RistrictPolicy::class)
+    <!--<meta http-equiv="Content-Security-Policy" content="Content-Security-Policy: 'font-src' 'fonts.gstatic.com'" />-->
+
+    <meta property="csp-nonce" content="{{ csp_nonce() }}">
     <!-- Metas -->
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{URL::to('assets/img/apple-icon.png')}}">
+    <link rel="icon" type="image/png" href="{{URL::to('assets/img/favicon.png')}}">
         <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" nonce="{{ csp_nonce() }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin nonce="{{ csp_nonce() }}">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" nonce="{{ csp_nonce() }}">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" nonce="{{ csp_nonce() }}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" nonce="{{ csp_nonce() }}"/>
 
     <!-- Libraries Stylesheet -->
-    <link href="{{URL::to('lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{URL::to('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{URL::to('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
+    <link href="{{URL::to('lib/animate/animate.min.css')}}" rel="stylesheet" nonce="{{ csp_nonce() }}"/>
+    <link href="{{URL::to('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet" nonce="{{ csp_nonce() }}"/>
+    <link href="{{URL::to('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet"  nonce="{{ csp_nonce() }}"/>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{URL::to('assets/front/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{URL::to('assets/front/css/bootstrap.min.css')}}" rel="stylesheet" nonce="{{ csp_nonce() }}">
 
     <!-- Template Stylesheet -->
-    <link href="{{URL::to('assets/front/css/style.css')}}" rel="stylesheet">
+    <link href="{{URL::to('assets/front/css/style.css')}}" rel="stylesheet"  nonce="{{ csp_nonce() }}">
 
     <!-- Alpine -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    @livewireStyles
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer nonce="{{ csp_nonce() }}"></script>
+    
+    @livewireStyles(['nonce' => csp_nonce() ])
+
 
 </head>
 
@@ -39,7 +45,7 @@
 
         <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"  nonce="{{ csp_nonce() }}">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -50,18 +56,14 @@
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>UK</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>support@dodgyone.com</small>
+                <div class="d-inline-flex align-items-center" style="height: 45px;" nonce="{{ csp_nonce() }}">
+                    <small class="me-1 text-light"><a class="text-light" href="mailto:support@dodgyone.com"><i class="fa fa-envelope-open me-2"></i>support@dodgyone.com</a></small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>-->
+                <div class="d-inline-flex align-items-center" style="height: 45px;" nonce="{{ csp_nonce() }}">
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank" href="https://www.facebook.com/profile.php?id=100094499823651 "><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>-->
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank" href="https://www.instagram.com/dodgyoneuk/ "><i class="fab fa-instagram fw-normal"></i></a>
-                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>-->
                 </div>
             </div>
         </div>
@@ -74,9 +76,6 @@
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="{{ route('home') }}" class="navbar-brand p-0">
                 <h1 class="text-danger m-0 d-none">
-                    <!--<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><style>svg{fill:#dc3545}</style><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>-->
-                    <!--<i class="fa-thin fa-house fa-sm" style="color: #6b2424;"></i>-->
-                    <!--<i class="fa-duotone fa-house fa-sm" style="--fa-primary-color: #86b817; --fa-secondary-color: #2a511f;"></i>-->
                     DodgyOne</h1>
                  <img src="{{URL::to('assets/img/logo.png')}}" alt="Logo"> 
             </a>
@@ -106,7 +105,7 @@
 
     
  <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" nonce="{{ csp_nonce() }}">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -119,10 +118,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>UK</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>support@dodgyone.com</p>
+                    
+                    <p class="mb-1"><a class="text-light" href="mailto:support@dodgyone.com"><i class="fa fa-envelope me-2"></i>support@dodgyone.com</a></p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100094499823651 "><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100094499823651"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/dodgyoneuk/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -164,8 +163,8 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" nonce="{{ csp_nonce() }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" nonce="{{ csp_nonce() }}"></script>
     <script src="{{URL::to('lib/wow/wow.min.js')}}"></script>
     <script src="{{URL::to('lib/easing/easing.min.js')}}"></script>
     <script src="{{URL::to('lib/waypoints/waypoints.min.js')}}"></script>
@@ -180,7 +179,7 @@
     <script src="{{URL::to('assets/js/core/popper.min.js')}}"></script>
     <script src="{{URL::to('assets/js/core/bootstrap.min.js')}}"></script>
     <script src="{{URL::to('assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
-    <script>
+    <script nonce="{{ csp_nonce() }}">
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
             var options = {
@@ -191,10 +190,11 @@
 
     </script>
     <!-- Github buttons -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js" nonce="{{ csp_nonce() }}"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}"></script>
-    @livewireScripts
+    
+    @livewireScripts(['nonce' => csp_nonce() ])
 </body>
 
 </html>

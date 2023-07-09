@@ -45,6 +45,13 @@ Route::get('/faq', [HomeController::class,'faq'])->name('faq');
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
 
+Route::get('/google-login', function(Request $request){
+    print_r($request->all());
+    die;
+})->name('google-login');
+
+
+
 Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-password');
 
 Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')->middleware('signed');

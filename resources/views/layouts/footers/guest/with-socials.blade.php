@@ -2,41 +2,34 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-8 mb-4 mx-auto text-center">
-                  <a href="#" target="_blank"
+                  <a href="{{ route('home') }}" target="_blank"
                       class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                      Company
+                      Home
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="{{ route('about') }}" target="_blank"
                       class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
                       About Us
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="{{ route('contact') }}" target="_blank"
                       class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                      Team
+                      Contact Us
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="{{ route('privacy-policy') }}" target="_blank"
                       class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                      Products
+                      Privacy Policy
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="{{ route('terms') }}" target="_blank"
                       class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                      Blog
+                      Terms
                   </a>
               </div>
               <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-<!--                  <a href="https://dribbble.com/creativetim" target="_blank" class="text-secondary me-xl-4 me-4">
-                      <span class="text-lg fab fa-dribbble"></span>
-                  </a>-->
-                  <a href="#" target="_blank" class="text-secondary me-xl-4 me-4">
-                      <span class="text-lg fab fa-twitter"></span>
+                  <a href="https://www.facebook.com/profile.php?id=100094499823651" target="_blank" class="text-secondary me-xl-4 me-4">
+                      <span class="text-lg fab fa-facebook"></span>
                   </a>
-                  <a href="#" target="_blank"
+                  <a href="https://www.instagram.com/dodgyoneuk/" target="_blank"
                       class="text-secondary me-xl-4 me-4">
                       <span class="text-lg fab fa-instagram"></span>
-                  </a>
-                  <a href="#" target="_blank"
-                      class="text-secondary me-xl-4 me-4">
-                      <span class="text-lg fab fa-pinterest"></span>
                   </a>
               </div>
           </div>
