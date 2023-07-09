@@ -79,7 +79,7 @@ class Tenant extends Component
             array('id'=>4,'name'=>'Late payment'),
             array('id'=>5,'name'=>'Farming'),
             array('id'=>6,'name'=>'Drugs'),
-            
+
         );
         return view('livewire.tenant')->with('rating_categories',$rating_categories);
     }

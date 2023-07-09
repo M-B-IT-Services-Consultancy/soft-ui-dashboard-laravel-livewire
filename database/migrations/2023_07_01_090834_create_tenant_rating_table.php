@@ -23,6 +23,9 @@ return new class extends Migration
             $table->integer('tenant_id')->nullable();
             $table->timestamp('property_rented_from')->nullable();
             $table->timestamp('property_rented_till')->nullable();
+            $table->tinyInteger('status')->default(0);
+            $table->integer('approved_by')->nullable();
+            $table->dateTime('approved_at')->nullable();
             $table->timestamps();
         });
     }

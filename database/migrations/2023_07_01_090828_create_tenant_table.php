@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string('tenant_dl_number_img')->nullable();
             $table->string('tenant_ni_number')->nullable();
             $table->string('tenant_ni_number_img')->nullable();
+            $table->tinyInteger('status')->default(0);
+            $table->integer('approved_by')->nullable();
+            $table->dateTime('approved_at')->nullable();
             $table->timestamps();
         });
     }

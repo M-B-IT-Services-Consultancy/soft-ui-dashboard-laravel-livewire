@@ -2,7 +2,7 @@
 
 
 @section("content")
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfrHf0mAAAAAIy_xAbMEDvXgs-M6EEHaZpEGvZl"></script>
+<script src="https://www.google.com/recaptcha/api.js" nonce="{{ csp_nonce() }}"></script>
 
 <div class="container-fluid bg-primary hero-header">
             <div class="container ">
@@ -45,7 +45,8 @@
                 </div>
                 
                 <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="contact-us" method="POST">
+                    <form action="contact-us" id="contact-us-form" method="POST">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -71,6 +72,10 @@
                                     <label for="message">Message</label>
                                 </div>
                             </div>
+                            <button class="g-recaptcha" 
+                                data-sitekey="6LdCb_4mAAAAAC7tnL_zoEPfvidLRKZqo9aHnaIX" 
+                                data-callback='onSubmit' 
+                                data-action='submit'>Submit</button>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                             </div>
@@ -83,6 +88,11 @@
     <!-- Contact End -->
 
 <script>
+   function onSubmit(token) {
+     document.getElementById("contact-us-form").submit();
+   }
+ </script>
+<!--<script>
 function onClick(e) {
   e.preventDefault();
   grecaptcha.enterprise.ready(async () => {
@@ -93,6 +103,6 @@ function onClick(e) {
     // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
   });
 }
-</script>
+</script>-->
 
 @endsection

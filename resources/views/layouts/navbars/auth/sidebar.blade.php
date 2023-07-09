@@ -44,8 +44,8 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Landlord</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Route::currentRouteName() == 'tenants' ? 'active' : '' }}"
-                    href="{{ route('tenants') }}">
+                <a class="nav-link {{ Route::currentRouteName() == 'wizard' ? 'active' : '' }}"
+                    href="{{ route('wizard') }}">
                     <div
                         class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1"
