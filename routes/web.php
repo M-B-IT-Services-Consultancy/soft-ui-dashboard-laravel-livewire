@@ -15,6 +15,7 @@ use App\Http\Livewire\StaticSignUp;
 use App\Http\Livewire\Rtl;
 use App\Http\Livewire\Tenant;
 use App\Http\Livewire\Property;
+use App\Http\Livewire\Wizard;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
@@ -68,6 +69,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/laravel-user-management', UserManagement::class)->name('user-management');
     Route::get('/tenants', Tenant::class)->name('tenants');
     Route::get('/property', Property::class)->name('property');
+    Route::get('/wizard', Wizard::class)->name('wizard');
     
 });
 

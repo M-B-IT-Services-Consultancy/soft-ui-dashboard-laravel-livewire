@@ -7,7 +7,7 @@
     <title>Dodgy | Landlord helping landlord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     @cspMetaTag(App\Support\Csp\Policies\RistrictPolicy::class)
-    <!--<meta http-equiv="Content-Security-Policy" content="Content-Security-Policy: 'font-src' 'fonts.gstatic.com'" />-->
+    
 
     <meta property="csp-nonce" content="{{ csp_nonce() }}">
     <!-- Metas -->
@@ -192,7 +192,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js" nonce="{{ csp_nonce() }}"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}"></script>
+    <script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}" nonce="{{ csp_nonce() }}"></script>
     
     @livewireScripts(['nonce' => csp_nonce() ])
 </body>

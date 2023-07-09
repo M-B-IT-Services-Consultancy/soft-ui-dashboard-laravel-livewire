@@ -33,8 +33,13 @@ class RistrictPolicy extends Basic {
 //                    Keyword::SELF,
 //                ])
                 ->addDirective(Directive::SCRIPT, [
-                    Keyword::UNSAFE_INLINE,Keyword::UNSAFE_EVAL
+//                    Keyword::UNSAFE_INLINE,
+                    Keyword::UNSAFE_EVAL,
                 ])
+//                ->addDirective(Directive::SCRIPT, [
+//                    Keyword::NONE,
+//                ])
+                
                 ->addDirective(Directive::STYLE, [
                         Keyword::SELF,Keyword::UNSAFE_HASHES,
                 ])
@@ -79,10 +84,15 @@ class RistrictPolicy extends Basic {
                 ])
                 ->addDirective(Directive::SCRIPT, [
                     'cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js',
+                    
                 ])
-                ->addNonceForDirective(Directive::STYLE, [
-                    Keyword::SELF,
+                ->addNonceForDirective(Directive::SCRIPT, [
+                    'google.com/recaptcha/api.js',
+                    
                 ])
+//                ->addNonceForDirective(Directive::STYLE, [
+//                    Keyword::SELF,
+//                ])
                 ->addDirective(Directive::STYLE, [
                     'cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/',
                     'cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/'
