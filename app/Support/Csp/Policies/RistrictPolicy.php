@@ -39,9 +39,9 @@ class RistrictPolicy extends Basic {
                 ->addDirective(Directive::FRAME, [
                     Keyword::UNSAFE_INLINE,
                 ])
-//                ->addDirective(Directive::SCRIPT, [
-//                    Keyword::NONE,
-//                ])
+                ->addDirective(Directive::SCRIPT, [
+                    Keyword::UNSAFE_INLINE,
+                ])
                 
                 ->addDirective(Directive::STYLE, [
                         Keyword::SELF,Keyword::UNSAFE_HASHES,
@@ -86,15 +86,16 @@ class RistrictPolicy extends Basic {
                     'fonts.googleapis.com/',
                 ])
                 ->addDirective(Directive::SCRIPT, [
+                    Keyword::UNSAFE_INLINE,
                     'cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js',
                     'google.com/',
-                    'https://www.google.com/recaptcha/', 
-                    'https://www.gstatic.com/recaptcha/',
+                    'google.com/recaptcha/', 
+                    'gstatic.com/recaptcha/',
                 ])
                 ->addDirective(Directive::FRAME, [
                     'google.com/',
-                    'https://www.google.com/recaptcha/', 
-                    'https://www.gstatic.com/recaptcha/',
+                    'www.google.com/recaptcha/', 
+                    'www.gstatic.com/recaptcha/',
                 ])
                 ->addNonceForDirective(Directive::SCRIPT, [
                     'google.com/recaptcha/api.js',

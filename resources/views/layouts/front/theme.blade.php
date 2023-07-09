@@ -165,20 +165,20 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" nonce="{{ csp_nonce() }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" nonce="{{ csp_nonce() }}"></script>
-    <script src="{{URL::to('lib/wow/wow.min.js')}}"></script>
-    <script src="{{URL::to('lib/easing/easing.min.js')}}"></script>
-    <script src="{{URL::to('lib/waypoints/waypoints.min.js')}}"></script>
-    <script src="{{URL::to('lib/owlcarousel/owl.carousel.min.js')}}"></script>
-    <script src="{{URL::to('lib/tempusdominus/js/moment.min.js')}}"></script>
-    <script src="{{URL::to('lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
-    <script src="{{URL::to('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    <script src="{{URL::to('lib/wow/wow.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('lib/easing/easing.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('lib/waypoints/waypoints.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('lib/owlcarousel/owl.carousel.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('lib/tempusdominus/js/moment.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('lib/tempusdominus/js/moment-timezone.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}" nonce="{{ csp_nonce() }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{URL::to('assets/front/js/main.js')}}"></script>
+    <script src="{{URL::to('assets/front/js/main.js')}}" nonce="{{ csp_nonce() }}"></script>
     <!--   Core JS Files   -->
-    <script src="{{URL::to('assets/js/core/popper.min.js')}}"></script>
-    <script src="{{URL::to('assets/js/core/bootstrap.min.js')}}"></script>
-    <script src="{{URL::to('assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
+    <script src="{{URL::to('assets/js/core/popper.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('assets/js/core/bootstrap.min.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <script src="{{URL::to('assets/js/plugins/smooth-scrollbar.min.js')}}" nonce="{{ csp_nonce() }}"></script>
     <script nonce="{{ csp_nonce() }}">
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
