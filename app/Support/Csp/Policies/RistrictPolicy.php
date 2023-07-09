@@ -32,9 +32,12 @@ class RistrictPolicy extends Basic {
 //                ->addDirective(Directive::SCRIPT, [
 //                    Keyword::SELF,
 //                ])
-                ->addDirective(Directive::SCRIPT, [
+//                ->addDirective(Directive::SCRIPT, [
 //                    Keyword::UNSAFE_INLINE,
-                    Keyword::UNSAFE_EVAL,
+//                    Keyword::UNSAFE_EVAL,
+//                ])
+                ->addDirective(Directive::FRAME, [
+                    Keyword::UNSAFE_INLINE,
                 ])
 //                ->addDirective(Directive::SCRIPT, [
 //                    Keyword::NONE,
@@ -84,7 +87,14 @@ class RistrictPolicy extends Basic {
                 ])
                 ->addDirective(Directive::SCRIPT, [
                     'cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js',
-                    
+                    'google.com/',
+                    'https://www.google.com/recaptcha/', 
+                    'https://www.gstatic.com/recaptcha/',
+                ])
+                ->addDirective(Directive::FRAME, [
+                    'google.com/',
+                    'https://www.google.com/recaptcha/', 
+                    'https://www.gstatic.com/recaptcha/',
                 ])
                 ->addNonceForDirective(Directive::SCRIPT, [
                     'google.com/recaptcha/api.js',
