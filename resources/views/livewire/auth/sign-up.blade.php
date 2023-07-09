@@ -1,14 +1,13 @@
   <section class="h-100-vh mb-8">
       <div class="page-header align-items-start section-height-50 pt-5 pb-11 m-3 border-radius-lg"
-          style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+          style="background-image: url('../assets/front/img/hero-image-1.jpeg');">
           <span class="mask bg-gradient-dark opacity-6"></span>
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-5 text-center mx-auto">
                       <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
                       <p class="text-lead text-white">
-                          {{ __('Use these awesome forms to login or create new account in your
-                          project for free.') }}
+                          {{ __('login or create new account') }}
                       </p>
                   </div>
               </div>

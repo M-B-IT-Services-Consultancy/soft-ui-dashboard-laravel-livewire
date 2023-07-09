@@ -14,6 +14,8 @@ class HomeController extends Controller
     public function index()
     {
         //
+        $dodgyTenants[] = array('Ali Sultan','ali_sultan1986@hotmail.co.uk','07773320009'); 
+        'Was subletting property, unpaid rent. He is a player of this industry and can fool reference companies easily. ';
         return view('front.home');
     }
     
