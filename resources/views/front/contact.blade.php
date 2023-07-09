@@ -88,11 +88,18 @@
     <!-- Contact End -->
 
 <script>
+  const onloadCallback = function() {
+    console.log("reCAPTCHA has loaded!");
+    grecaptcha.reset();
+  };
+</script>
+<script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" nonce="{{ csp_nonce() }}"></script>
+<!--<script >
    function onSubmit(token) {
      document.getElementById("contact-us-form").submit();
    }
- </script>
-<!--<script>
+ <script>
+<script>
 function onClick(e) {
   e.preventDefault();
   grecaptcha.enterprise.ready(async () => {
