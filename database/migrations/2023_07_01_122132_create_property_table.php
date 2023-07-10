@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('town')->nullable();
             $table->string('city')->nullable();
             $table->string('zip_code')->nullable();
+            $table->string('county')->nullable();
             $table->string('country')->nullable();
             $table->tinyInteger('status')->default(0);
             $table->integer('added_by')->nullable();
