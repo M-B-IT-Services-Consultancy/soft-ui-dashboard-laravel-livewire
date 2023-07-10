@@ -17,6 +17,7 @@ use App\Http\Livewire\Tenant;
 use App\Http\Livewire\Property;
 use App\Http\Livewire\Wizard;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 use App\Http\Livewire\LaravelExamples\UserManagement;
@@ -37,6 +38,7 @@ use Illuminate\Http\Request;
 //Route::livewire('/register','sign-up');
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
+Route::post('contact', [ContactController::class, 'store'])->name('contact.us.store');
 Route::get('/terms', [HomeController::class,'terms'])->name('terms');
 Route::get('/privacy-policy', [HomeController::class,'privacy_policy'])->name('privacy-policy');
 Route::get('/cookie', [HomeController::class,'cookie'])->name('cookie');

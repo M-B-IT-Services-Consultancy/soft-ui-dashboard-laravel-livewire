@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tenant_rating', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('rating'); // worst=>1 bad=>2 fair=>3
-            $table->tinyInteger('property_issues'); // Rent arrears =>1 Subletting=>2 Behavior=>3 Late payment => 4 Farming => 5 Drugs => 6
+            $table->string('property_issues')->nullable(); // can save multiple.. Rent arrears =>1 Subletting=>2 Behavior=>3 Late payment => 4 Farming => 5 Drugs => 6
             $table->string('rating_description')->nullable();
             $table->integer('testimonial_by')->nullable();
             $table->timestamp('testimonial_at')->useCurrent();

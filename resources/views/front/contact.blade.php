@@ -2,7 +2,8 @@
 
 
 @section("content")
-<script src="https://www.google.com/recaptcha/api.js" nonce="{{ csp_nonce() }}"></script>
+
+<!--<script src="https://www.google.com/recaptcha/api.js" nonce="{{ csp_nonce() }}"></script>-->
 
 <div class="container-fluid bg-primary hero-header">
             <div class="container ">
@@ -45,71 +46,69 @@
                 </div>
                 
                 <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="contact-us" id="contact-us-form" method="POST">
-                        @csrf
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                    <div class="card-body">
+                     
+                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm">
+                            {{ csrf_field() }}
+                              
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group-">
+                                        <strong>Name:</strong>
+                                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
+                                        @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <strong>Email:</strong>
+                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <strong>Phone:</strong>
+                                        <input type="text" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
+                                        @if ($errors->has('phone'))
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="phone" placeholder="Phone">
-                                    <label for="phone">Phone</label>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <strong>Message:</strong>
+                                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                        @if ($errors->has('message'))
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+                                        @endif
+                                        @if ($errors->has('g-recaptcha-response'))
+                                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                                        @endif
+                                    </div>  
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
+                   
+                            <div class="col-12 mt-2">
+                                <button class="rounded-pill py-2 px-4 btn btn-primary btn-submit">Submit</button>
                             </div>
-                            <button class="g-recaptcha" 
-                                data-sitekey="6LdCb_4mAAAAAC7tnL_zoEPfvidLRKZqo9aHnaIX" 
-                                data-callback='onSubmit' 
-                                data-action='submit'>Submit</button>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Contact End -->
 
-<script>
-  const onloadCallback = function() {
-    console.log("reCAPTCHA has loaded!");
-    grecaptcha.reset();
-  };
-</script>
-<script async src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" nonce="{{ csp_nonce() }}"></script>
-<!--<script >
-   function onSubmit(token) {
-     document.getElementById("contact-us-form").submit();
-   }
- <script>
-<script>
-function onClick(e) {
-  e.preventDefault();
-  grecaptcha.enterprise.ready(async () => {
-    const token = await grecaptcha.enterprise.execute('6LfrHf0mAAAAAIy_xAbMEDvXgs-M6EEHaZpEGvZl', {action: 'contact-us'});
-    // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
-    // reCAPTCHA Enterprise to the end user's browser.
-    // This token must be validated by creating an assessment.
-    // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
-  });
-}
-</script>-->
-
+ 
 @endsection

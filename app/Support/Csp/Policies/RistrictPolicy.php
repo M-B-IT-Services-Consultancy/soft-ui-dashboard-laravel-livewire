@@ -42,9 +42,18 @@ class RistrictPolicy extends Basic {
                 ->addDirective(Directive::SCRIPT, [
                     Keyword::UNSAFE_INLINE,
                 ])
+                ->addDirective(Directive::SCRIPT, [
+                    Keyword::SELF,
+                ])
+                ->addDirective(Directive::STYLE_ATTR, [
+                    Keyword::UNSAFE_INLINE,
+                ])
                 
                 ->addDirective(Directive::STYLE, [
                         Keyword::SELF,Keyword::UNSAFE_HASHES,
+                ])
+                ->addNonceForDirective(Directive::STYLE, [
+                        Keyword::UNSAFE_HASHES,
                 ])
                 ->addNonceForDirective(Directive::SCRIPT, [
                     Keyword::UNSAFE_HASHES,
@@ -111,6 +120,19 @@ class RistrictPolicy extends Basic {
                 ->addDirective(Directive::IMG, [
                     'self',
                     'data'])
+                // for SIgn in API
+                ->addDirective(Directive::CONNECT, [
+                    'https://accounts.google.com/gsi/',
+                    ])
+                ->addDirective(Directive::FRAME, [
+                    'https://accounts.google.com/gsi/',
+                    ])
+                ->addDirective(Directive::SCRIPT, [
+                    'https://accounts.google.com/gsi/client',
+                    ])
+                ->addDirective(Directive::STYLE, [
+                    'https://accounts.google.com/gsi/style',
+                    ])
         ;
     }
 

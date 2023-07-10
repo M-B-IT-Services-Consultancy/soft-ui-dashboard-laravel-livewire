@@ -8,6 +8,7 @@
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/sign-up.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/front/css/style.css</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/User.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/js/custom.js</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/composer.lock</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/config/jetstream.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Providers/EventServiceProvider.php</file>
@@ -28,6 +29,7 @@
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/front/theme.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/routes/web.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/tenant.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/ContactController.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/faq.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/config/app.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/wizard.blade.php</file>
@@ -57,7 +59,9 @@
             <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Providers/FortifyServiceProvider.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/auth/login.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/terms.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/js/soft-ui-dashboard.js</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/guest/login.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Rules/ReCaptcha.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/reset-password.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/footers/auth/footer.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/login.blade.php</file>

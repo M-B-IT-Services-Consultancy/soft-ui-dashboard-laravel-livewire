@@ -34,7 +34,7 @@
     <link href="{{URL::to('assets/front/css/style.css')}}" rel="stylesheet"  nonce="{{ csp_nonce() }}">
 
     <!-- Alpine -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer nonce="{{ csp_nonce() }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     
     @livewireStyles(['nonce' => csp_nonce() ])
 
@@ -193,7 +193,30 @@
     <script async defer src="https://buttons.github.io/buttons.js" nonce="{{ csp_nonce() }}"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}" nonce="{{ csp_nonce() }}"></script>
-    
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_KEY') }}" nonce="{{ csp_nonce() }}"></script>
+
+    <script type="text/javascript" nonce="{{ csp_nonce() }}">
+        console.log('we are here');
+    $('#contactUSForm').submit(function(event) {
+        event.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute("{{ env('GOOGLE_RECAPTCHA_KEY') }}", {action: 'subscribe_newsletter'}).then(function(token) {
+                $('#contactUSForm').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                $('#contactUSForm').unbind('submit').submit();
+            });;
+        });
+    });
+    </script>
+    <script type="text/javascript" nonce="{{ csp_nonce() }}">
+    function onloadCallback() {
+        /* Place your recaptcha rendering code here */
+        const onloadCallback = function() {
+            console.log("reCAPTCHA has loaded!");
+            grecaptcha.reset();
+        };
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" nonce="{{ csp_nonce() }}"></script>
     @livewireScripts(['nonce' => csp_nonce() ])
 </body>
 
