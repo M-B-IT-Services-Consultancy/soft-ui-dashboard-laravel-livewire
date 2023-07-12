@@ -113,7 +113,9 @@ class Wizard extends Component
 //        
 //        $tenant_photo_path =  $this->tenant_photo->temporaryUrl()('images/tenant_photo/'.Auth::user()->id,'public');
         
-        $imageName = time(). basename($image);
+        
+        $imageName = basename($image);
+        
         $location = 'images/tenant_photo/'.Auth::user()->id;
         $this->tenant_photo->storeAs($location, $imageName);
 

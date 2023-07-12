@@ -25,6 +25,8 @@ class Tenant extends Component
     public $tenant_dl_number_img = '';
     public $tenant_ni_number = '';
     public $tenant_ni_number_img = '';
+    public $prop_issues = array(1=>'Rent arrears',2=>'Subletting',3=>'Behavior',4=>'Late payment',5=>'Farming',6=>'Drugs'); //Rent arrears =>1 Subletting=>2 Behavior=>3 Late payment => 4 Farming => 5 Drugs => 6
+    public $tenants;
     
     public $showSuccesNotification = false; 
     public $showFailureNotification = false;
@@ -38,6 +40,13 @@ class Tenant extends Component
         'tenant_phone' => 'max:10',
         'tenant_photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024'
     ];
+    
+    public function mount(){
+        
+        $this->tanents = \App\Models\Tenant::with('tenant_rating')->get()
+                ->sortByDesc('id')
+            ->toArray();
+    }
         
     public function save() {
     
@@ -59,28 +68,9 @@ class Tenant extends Component
         }
     }
     
-    public function upload()
-    {
-        $this->validate([
-            'photos.*' => 'image|max:1024', // 1MB Max
-        ]);
- 
-        foreach ($this->photos as $photo) {
-            $photo->store('photos');
-        }
-    }
     
     public function render()
     {
-        $rating_categories = array(
-            array('id'=>1,'name'=>'Rent arrears'),
-            array('id'=>2,'name'=>'Subletting'),
-            array('id'=>3,'name'=>'Behavior'),
-            array('id'=>4,'name'=>'Late payment'),
-            array('id'=>5,'name'=>'Farming'),
-            array('id'=>6,'name'=>'Drugs'),
-
-        );
-        return view('livewire.tenant')->with('rating_categories',$rating_categories);
+        return view('livewire.tenant')->with('prop_issues',$this->prop_issues);
     }
 }

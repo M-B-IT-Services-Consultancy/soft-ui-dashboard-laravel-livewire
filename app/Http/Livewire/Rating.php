@@ -3,25 +3,30 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+//use App\Model\Rating;
+use App\Models\Tenant;
 
 class Rating extends Component
 {
     public $rating;
     public $avgRating;
-    public $tenant;
+    public $tenants;
 
-    public function mount($tenant) {
-        $this->book = $tenant;
-        $userRating = $this->tenant->users()
-            ->where('user_id', auth()->user()->id)->first();
+    public function mount() {
+        
+        $this->tenants = Tenant::with('tenant_rating')->get()
+                ->sortByDesc('id')
+            ->toArray();
+//        $userRating = $this->tenant->tenant()
+//            ->where('user_id', auth()->user()->id)->first();
 
-        if (!$userRating) {
-            $this->rating = 0;
-        } else {
-            $this->rating = $userRating->pivot->rating;
-        }
+//        if (!$userRating) {
+//            $this->rating = 0;
+//        } else {
+//            $this->rating = $userRating->pivot->rating;
+//        }
 
-        $this->calculateAverageRating();
+//        $this->calculateAverageRating();
     }
 
     private function calculateAverageRating() {

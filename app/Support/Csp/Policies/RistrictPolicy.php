@@ -119,7 +119,7 @@ class RistrictPolicy extends Basic {
                 ])
                 ->addDirective(Directive::IMG, [
                     'self',
-                    'data'])
+                    'data:'])
                 // for SIgn in API
                 ->addDirective(Directive::CONNECT, [
                     'https://accounts.google.com/gsi/',

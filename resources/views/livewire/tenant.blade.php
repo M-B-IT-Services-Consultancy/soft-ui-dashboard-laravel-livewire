@@ -1,139 +1,85 @@
-<div class="main-content">
-    <div class="page-header min-height-300 border-radius-xl mt-4 d-none"
-        style="background-image: url('../assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
-        <span class="mask bg-gradient-primary opacity-6"></span>
-    </div>
-    
-</div>
-<div class="container-fluid py-4">
-    <div class="row">
-        <div class="col-12 col-xl-12">
-            <div class="card h-100">
-                <div class="card-header pb-0 p-3">
-                    <h6 class="mb-0">Add New Tenant</h6>
-                </div>
-                <div class="card-body">
-
-                    <form wire:submit.prevent="tenant" action="#"  role="form text-left">
-                                <div>
-                                    <label for="tenant_name">{{ __('Tenant Name') }}</label>
-                                    <div class="@error('tenant_name')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_name" id="tenant_name" type="text" class="form-control" required="required"
-                                            placeholder="Tenant Name" aria-label="Tenant Name" aria-describedby="tenant_name-addon">
-                                    </div>
-                                    @error('tenant_name') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                <div>
-                                    <label for="tenant_photo">{{ __('Tenant Photo') }}</label>
-                                    <div class="@error('tenant_photo')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_photo" id="tenant_photo" type="file" class="form-control"
-                                            placeholder="Tenant Photo" aria-label="Tenant Photo" aria-describedby="tenant_photo-addon">
-                                    </div>
-                                    @if ($tenant_photo)
-                                        Photo Preview:
-                                        <img src="{{ $tenant_photo->temporaryUrl() }}">
-                                    @endif
-                                    @error('tenant_photo') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                <div>
-                                    <label for="tenant_email">{{ __('Tenant Email') }}</label>
-                                    <div class="@error('tenant_email')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_email" id="tenant_email" type="email" class="form-control"
-                                            placeholder="Tenant Email" aria-label="Tenant Email" aria-describedby="tenant_email-addon">
-                                    </div>
-                                    @error('tenant_email') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                <div>
-                                    <label for="tenant_phone">{{ __('Tenant Phone') }}</label>
-                                    <div class="@error('tenant_phone')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_phone" id="tenant_phone" type="text" class="form-control"
-                                            placeholder="Tenant Phone" aria-label="Tenant Phone" aria-describedby="tenant_phone-addon">
-                                    </div>
-                                    @error('tenant_phone') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                <div>
-                                    <label for="tenant_dob">{{ __('Tenant Phone') }}</label>
-                                    <div class="@error('tenant_dob')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_dob" id="tenant_dob" type="date" min="1950" class="form-control"
-                                            placeholder="Tenant DOB" aria-label="Tenant DOB" aria-describedby="tenant_dob-addon">
-                                    </div>
-                                    @error('tenant_dob') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                <div>
-                                    <label for="tenant_passport">{{ __('Tenant Passport #') }}</label>
-                                    <div class="@error('tenant_passport')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_passport" id="tenant_passport" type="text" class="form-control"
-                                            placeholder="Tenant Passport" aria-label="Tenant Passport" aria-describedby="tenant_dob-addon">
-                                    </div>
-                                    @error('tenant_passport') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                
-                                <div>
-                                    <label for="tenant_dl_number">{{ __('Tenant DL #') }}</label>
-                                    <div class="@error('tenant_dl_number')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_dl_number" id="tenant_dl_number" type="text" class="form-control"
-                                            placeholder="Tenant DL #" aria-label="Tenant DL #" aria-describedby="tenant_dob-addon">
-                                    </div>
-                                    @error('tenant_dl_number') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                
-                                <div>
-                                    <label for="tenant_ni_number">{{ __('Tenant NID') }}</label>
-                                    <div class="@error('tenant_ni_number')border border-danger rounded-3 @enderror mb-3">
-                                        <input wire:model="tenant_ni_number" id="tenant_ni_number" type="text" class="form-control"
-                                            placeholder="Tenant National ID" aria-label="Tenant NID" aria-describedby="tenant_dob-addon">
-                                    </div>
-                                    @error('tenant_ni_number') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                        <div class="col-md-8 d-flex align-items-center">
-                            <h6 class="mb-0">Review Information</h6>
-                        </div>
-                                <div>
-                                    <label for="rating">{{ __('Rating') }}</label>
-                                    <div class="@error('rating')border border-danger rounded-3 @enderror mb-3">
-                                        <select wire:model="rating" class="form-control" required="required">
-                <option value="" selected>Select Rating</option>
-                @foreach($rating_categories as $rating_category)
-                    <option value="{{ $rating_category['id'] }}">{{ $rating_category['name'] }}</option>
-                @endforeach
-            </select>
-                                    </div>
-                                    @error('rating') <div class="text-danger">{{ $message }}</div> @enderror
-                                </div>
-                                
-                                <div class="text-center">
-                                    <button type="submit"
-                                        class="btn bg-gradient-info w-100 mt-4 mb-0">{{ __('Add Tenant') }}</button>
-                                </div>
-                            </form>
-
-                            @if ($showSuccesNotification)
-                                <div wire:model="showSuccesNotification"
-                                    class="mt-3 alert alert-primary alert-dismissible fade show" role="alert">
-                                    <span class="alert-icon text-white"><i class="ni ni-like-2"></i></span>
-                                    <span class="alert-text text-white">
-                                        {{ __('Details for tenant has been successfuly saved!') }}</a></span>
-                                    <button wire:click="$set('showSuccesNotification', false)" type="button"
-                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                    </button>
-                                </div>
-                            @endif
-
-                            @if ($showFailureNotification)
-                                <div wire:model="showFailureNotification"
-                                    class="mt-3 alert alert-light alert-dismissible fade show" role="alert">
-                                    <span class="alert-text">{{ 'Please enter the correct email address!' }}</span>
-                                    <button wire:click="$set('showFailureNotification', false)" type="button"
-                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                    </button>
-                                </div>
-                            @endif
-                        </div>
-            </div>
+<div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+        <div class="card-header pb-0">
+          <h6>All Dodgy Tenants</h6>
         </div>
-        
-        
+        <div class="card-body px-0 pt-0 pb-2">
+          <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tenant Name</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email Address</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Phone</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rating</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Property Issues</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              
+                  @if($tanents)
+                  @foreach($tanents as $tanent)
+                  @php 
+                  $tenant_rating = $tanent['tenant_rating'];
+                  $rating = isset($tenant_rating['rating']) ? $tenant_rating['rating'] : 0;
+                  @endphp
+              
+                <tr>
+                  <td>
+                    <div class="d-flex px-2 py-1">
+                      <div>
+                        <img src="{{Storage::url($tanent['tenant_photo'])}}" class="avatar avatar-sm me-3">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">{{$tanent['tenant_name']}}</h6>
+                        <p class="text-xs text-secondary mb-0"></p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="text-xs font-weight-bold mb-0">{{$tanent['tenant_email']}}</p>
+                    <p class="text-xs text-secondary mb-0"></p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <p class="text-xs text-secondary mb-0">{{$tanent['tenant_phone']}}</p>
+                  </td>
+                  <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">
+                          <div class="mb-3">
+                        @for($s=1;$s<=$rating;$s++)
+                        <small class="fa fa-star text-{{ ($s<=3) ? 'danger' : 'gray'; }}"></small>
+                        @endfor                                
+                    </div>
+                      </span>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                      @if(isset($tanent['tenant_rating']['rating_description']))
+                    <p class="text-xs text-secondary mb-0">{{$tanent['tenant_rating']['rating_description']}}</p>
+                    @endif
+                  </td>
+                  <td class="align-middle">
+                    <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                      Edit
+                    </a>
+                    <a href="javascript:;" class="text-warning font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Approve">
+                      <span class="badge badge-sm bg-gradient-success">Approve</span>
+                    </a>
+                    <a href="javascript:;" class="text-warning font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Approve">
+                      <span class="badge badge-sm bg-gradient-danger">Deny</span>
+                    </a>
+                  </td>
+                </tr>
+                @endforeach
+                @endif
+                
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-</div>
-
+  </div>
+  
