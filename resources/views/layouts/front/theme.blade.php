@@ -128,11 +128,22 @@
                 
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Newsletter</h4>
-                    <!--<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>-->
                     <div class="position-relative mx-auto" >
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="copyright">
+            <div class="row g-5">
+                <div class="col-12 text-center text-white bg-dark text-md-start">
+                    <small><b><sup>**</sup>Disclaimer:</b><br/>
+                        The information on this website is provided <b>"as is"</b> and without any warranty or guarantee of accuracy. We accept no liability for any errors or omissions in the information, and we will not be liable for any damages that may result from the use of the information.
+                        The information on this website is not intended to be used as a substitute for professional advice. You should always consult with a qualified professional before making any decisions based on the information on this website.
+                        By using this website, you agree to the terms of this disclaimer.</small>
+                </div>
                 </div>
             </div>
         </div>
@@ -192,7 +203,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js" nonce="{{ csp_nonce() }}"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}" nonce="{{ csp_nonce() }}"></script>
+    <!--<script src="{{URL::to('assets/js/soft-ui-dashboard.js')}}" nonce="{{ csp_nonce() }}"></script>-->
     <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_KEY') }}" nonce="{{ csp_nonce() }}"></script>
 
     <script type="text/javascript" nonce="{{ csp_nonce() }}">
