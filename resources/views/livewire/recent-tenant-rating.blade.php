@@ -16,14 +16,13 @@
                     <div class="package-item-sub">
                         <div class="overflow-hidden">
                             @php
-                            $filename = '../assets/front/img/ali-sultan-fraud.png';
-                            $filetype = pathinfo($filename, PATHINFO_EXTENSION);
-                            $imgbinary = fread(fopen($filename, "r"), filesize($filename));
-                            $file_url = 'data:image/' . $filetype . ';base64,' . base64_encode($imgbinary);
+                            $filename = 'assets/front/img/ali-sultan-fraud.png';
+                            //$imgbinary = fread(fopen($filename, "r"), filesize($filename));
+                            //$file_url = 'data:image/png;base64,' . base64_encode($imgbinary);
                             $tenant_email = 'ali_sultan1986@hotmail.co.uk';
                             $tenant_phone = '07773320009';
                             $property_address = 'Falmouth House, Clarendon Place, LONDON';
-                            $property_issues = json_decode('{"0":"Resetingasd","2":"2","5":"5"}',true);
+                            $property_issues = json_decode('{"2":"2","5":"5"}',true);
                             $property_issues_str = '';
 
                             foreach($property_issues as $pi => $property_issue){
@@ -42,7 +41,7 @@
                             <div class="responsive mt-2">
                                 <table class="table table-bordered table-responsive">
                                     <tr><td>
-                                            <img class="img-fluid" src="{{$file_url}}" alt="Ali Jamal Mohamad Sultan" />
+                                            <img class="img-fluid" src="{{URL::to($filename)}}" alt="Ali Jamal Mohamad Sultan" />
                                         </td>
                                         <td>
                                             <table class="table table-bordered table-hover table-responsive table-success table-striped">
