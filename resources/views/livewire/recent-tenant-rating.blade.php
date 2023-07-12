@@ -16,7 +16,7 @@
                     <div class="package-item-sub">
                         <div class="overflow-hidden">
                             @php
-                            $filename = 'assets/front/img/ali-sultan-fraud.png';
+                            $filename = '../assets/front/img/ali-sultan-fraud.png';
                             $filetype = pathinfo($filename, PATHINFO_EXTENSION);
                             $imgbinary = fread(fopen($filename, "r"), filesize($filename));
                             $file_url = 'data:image/' . $filetype . ';base64,' . base64_encode($imgbinary);
