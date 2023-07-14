@@ -39,8 +39,6 @@ class NewsletterSubscriptionController extends Controller
         $data = $request->validate([
             'email' => 'required|email',
         ]);
-        
-        $data['email'] = 'brij.raj.singh2710@gmail.com';
 
         $existingSubscription = NewsletterSubscription::withTrashed()->whereEmail($data['email'])->first();
         
