@@ -168,7 +168,7 @@
 
     </div>
     @else
-    {{__('No tenant Ratings added yet! Be the first one to add.')}}
+    {{__('Be the first person to add tenant ratings, as none have been added yet!')}}
     @endif
         </div>
         </div>

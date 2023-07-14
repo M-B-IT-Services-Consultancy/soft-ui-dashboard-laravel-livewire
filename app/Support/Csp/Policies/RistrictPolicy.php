@@ -26,6 +26,9 @@ class RistrictPolicy extends Basic {
                 ->addDirective(Directive::BASE, [
                     Keyword::NONE,
                 ])
+                ->addDirective(Directive::FORM_ACTION, [
+                    Keyword::SELF,
+                ])
 //                ->addDirective(Directive::FONT, [
 //                    'fonts.gstatics.com',
 //                ])

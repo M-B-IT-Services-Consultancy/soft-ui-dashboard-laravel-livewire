@@ -3,88 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/laravel-examples/user-profile.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Notifications/TenantRatingSubmission.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Dashboard.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/sign-up.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/front/css/style.css</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/js/custom.js</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/User.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/composer.lock</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/static-sign-in.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/Controller.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/jetstream.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Auth/ForgotPassword.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/base.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Providers/EventServiceProvider.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/emails/newsletter-subscription-confirmation.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Support/Csp/Policies/RistrictPolicy.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_13_065104_create_jobs_table.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Mail/RegisterationMailNotify.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/emails/registration-mail.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Mail/NewsletterSubscriptionConfirmation.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Jobs/SendNewsletterSubscriptionConfirmation.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Requests/StoreNewsletterSubscriptionRequest.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Auth/SignUp.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/NewsletterSubscriptionController.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/.env</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/search-tenant.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/css/soft-ui-dashboard.css</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/home.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/fortify.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_01_122132_create_property_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/components/section-title.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/bootstrap/cache/livewire-components.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Rating.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Policies/CspMyCustomPolicy.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Auth/Login.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/css/nucleo-icons.css</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Kernel.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/sidebar.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/footers/guest/with-socials.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/services.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/SearchTenant.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/nav.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_07_113544_google_social_auth_id.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/dashboard.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Tenant.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/NewsletterSubscription.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/front/theme.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/home.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/emails/team-invitation.blade.php</file>
             <file>file:/Users/brijrajsingh/phpdev/dodgy/routes/web.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Notifications/ResetPassword.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/tenant.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/ContactController.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/RecentTenantRating.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/vendor/mail/html/header.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/app.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/faq.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/wizard.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Support/Csp/Policies/RistrictPolicy.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/HomeController.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/about.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/auth/forgot-password.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/composer.json</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/profile.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/seeders/DatabaseSeeder.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/csp.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/recent-tenant-rating.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Tables.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/cookie.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_07_115102_create_sessions_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/contact.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/nav-profile.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Wizard.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/footers/guest/description.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_03_053736_create_homes_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/rating.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/Tenant.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/components/tables/table.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/GoogleController.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/.htaccess</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_01_090828_create_tenant_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/css/wizard.css</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/rtl.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Providers/FortifyServiceProvider.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/auth/login.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/terms.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/public/assets/js/soft-ui-dashboard.js</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Rules/ReCaptcha.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/guest/login.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/footers/auth/footer.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/reset-password.blade.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_09_091803_create_rating_comments_table.php</file>
-            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/login.blade.php</file>
         </group>
     </open-files>
 </project-private>
