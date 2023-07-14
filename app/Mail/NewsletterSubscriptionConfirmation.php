@@ -17,7 +17,7 @@ class NewsletterSubscriptionConfirmation extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(NewsletterSubscription $subscription)
+    public function __construct()
     {
         //
         

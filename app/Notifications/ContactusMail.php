@@ -40,6 +40,7 @@ class ContactusMail extends Notification
     {
         $data = $this->data;
         return (new MailMessage)
+                    ->subject('Contact us request on '.env('APP_NAME'))
                     ->greeting('Dear Admin')
                     ->line('We have a new request to connect with')
                     ->line('Name: '.$data['name'])
