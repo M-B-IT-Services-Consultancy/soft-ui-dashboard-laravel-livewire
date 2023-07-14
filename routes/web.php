@@ -18,6 +18,7 @@ use App\Http\Livewire\Property;
 use App\Http\Livewire\Wizard;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsletterSubscriptionController;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 use App\Http\Livewire\LaravelExamples\UserManagement;
@@ -54,10 +55,24 @@ Route::get('/google-login', function(Request $request){
 })->name('google-login');
 
 
+Route::get('email-test', function(){
+$details['email'] = 'brij.raj.singh2710@gmail.com';
+dispatch(new App\Jobs\SendNewsletterSubscriptionConfirmation($details));
+dd('done');
+});
 
 Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-password');
 
 Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')->middleware('signed');
+
+/**
+ * URL for newsletter subscription
+ */
+
+//Route::group(['middleware' => 'web'], function() {
+Route::post('/subscribe', [NewsletterSubscriptionController::class,'store'])->name('subscribe');
+    Route::get('/unsubscribe',[NewsletterSubscriptionController::class,'destroy'])->name('unsubscribe');
+//});
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');

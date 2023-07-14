@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\Rules\ReCaptcha;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Notifications\Notifiable;
+use App\Notifications\ContactusMail;
 
 class ContactController extends Controller
 {
+    use Notifiable;
+    
+    public $email = 'dodgyoneuk@gmail.com';
      /**
      * Write code on Method
      *
@@ -24,15 +29,11 @@ class ContactController extends Controller
             'g-recaptcha-response' => ['required', new ReCaptcha]
         ]);
   
-        $input = $request->all();
-  
-        /*------------------------------------------
-        --------------------------------------------
-        Write Code for Store into Database
-        --------------------------------------------
-        --------------------------------------------*/
-        dd($input);
-  
+//        $input = $request->all();
+        $data['data'] = ['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'message'=>$request->message];
+        
+        $this->notify(new ContactusMail($data));
+        
         return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
     }
 }

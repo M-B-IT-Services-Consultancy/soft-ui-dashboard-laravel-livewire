@@ -129,8 +129,15 @@
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <div class="position-relative mx-auto" >
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        @if(session('flash'))
+                        <p class="text-success">{{ session('flash') }}</p>
+                        @endif
+                        <form action="{{route('subscribe')}}" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                        <input class="required form-control border-primary w-100 py-3 ps-4 pe-5" name="email" type="text" placeholder="Your email">
+                        <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        <!--<button type="submit">Subscribe</button>-->
+                        </form>
                     </div>
                 </div>
             </div>
@@ -139,10 +146,11 @@
             <div class="copyright">
             <div class="row g-5">
                 <div class="col-12 text-center text-white bg-dark text-md-start">
-                    <small><b><sup>**</sup>Disclaimer:</b><br/>
-                        The information on this website is provided <b>"as is"</b> and without any warranty or guarantee of accuracy. We accept no liability for any errors or omissions in the information, and we will not be liable for any damages that may result from the use of the information.
-                        The information on this website is not intended to be used as a substitute for professional advice. You should always consult with a qualified professional before making any decisions based on the information on this website.
-                        By using this website, you agree to the terms of this disclaimer.</small>
+                    <small><b><sup>**</sup>Disclaimer:</b><br/><br/>
+                        The information on this website is provided <b>"as is"</b> and without any warranty or guarantee of accuracy. We accept no liability for any errors or omissions in the information, and we will not be liable for any damages that may result from the use of the information.<br/><br/>
+                        The information on this website is not intended to be used as a substitute for professional advice. You should always consult with a qualified professional before making any decisions based on the information on this website.<br/><br/>
+                        By using this website, you agree to the terms of this disclaimer.
+                    </small>
                 </div>
                 </div>
             </div>
@@ -151,7 +159,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">DodgyOne</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="{{ route('home') }}">DodgyOne</a>, All Right Reserved.
                         <span class="d-none"><a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a></span>
                     </div>
                     <div class="col-md-6 text-center text-md-end">

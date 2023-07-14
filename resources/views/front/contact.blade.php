@@ -92,6 +92,12 @@
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
                                         @endif
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
                                         @if ($errors->has('g-recaptcha-response'))
                                             <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                                         @endif
@@ -110,5 +116,21 @@
     </div>
     <!-- Contact End -->
 
- 
+<!-- <div class="form-group">
+                    <script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script><div class="g-recaptcha" theme="light" id="buzzNoCaptchaId_e2b52330cb39124ef34114d0c29cb013" data-sitekey="6Lc7R0MjAAAAAE-DjSGkHQb-fAo9GDqEP6t_19jw"></div>
+                                    </div>
+                <div>-->
+
+<script type="text/javascript">
+    $('#contactUSForm').submit(function(event) {
+        event.preventDefault();
+    
+        grecaptcha.ready(function() {
+            grecaptcha.execute("{{ env('GOOGLE_RECAPTCHA_KEY') }}", {action: 'subscribe_newsletter'}).then(function(token) {
+                $('#contactUSForm').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                $('#contactUSForm').unbind('submit').submit();
+            });;
+        });
+    });
+</script>
 @endsection
