@@ -100,6 +100,15 @@
     </div>
     <!-- Navbar & Hero End -->
 
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @if(session('flash'))
+                <p class="text-success">{{ session('flash') }}</p>
+                @endif
+            </div>
+        </div>
+    </div>
     
      @yield('content')
 
