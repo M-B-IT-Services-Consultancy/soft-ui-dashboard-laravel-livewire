@@ -34,9 +34,9 @@ class ContactController extends Controller
         $data['data'] = ['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'message'=>$request->message];
         
         if($this->notify(new ContactusMail($data))){
-            return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
+            return redirect()->back()->with('success', 'Contact Form Submit Successfully');
         }else{
-            return redirect()->back()->with(['error' => 'Some error occured please try again!']);
+            return redirect()->back()->with('error', 'Some error occured please try again!');
         }
         
         
