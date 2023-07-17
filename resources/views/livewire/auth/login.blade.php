@@ -7,7 +7,7 @@
                 <div class="col-lg-5 text-center mx-auto">
                     <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
                     <p class="text-lead text-white">
-                        {{ __('You may sign in using your social account as well') }}
+                        {{ __('SASYou may sign in using your social account as well') }}
                     </p>
                 </div>
             </div>
@@ -39,21 +39,9 @@
                             </a>
                         </div>
                         <div class="col-3 me-auto px-1">
-                            <script src="https://accounts.google.com/gsi/client" async defer></script>
-                            <div id="g_id_onload"
-                                 data-client_id="1020030456472-2inv945g4271aeei5iplad803n28hivt.apps.googleusercontent.com"
-                                 data-login_uri="google-login"
-                                 data-auto_prompt="true">
-                            </div>
-                            <div class="g_id_signin"
-                                 data-type="standard"
-                                 data-size="large"
-                                 data-theme="outline"
-                                 data-text="sign_in_with"
-                                 data-shape="rectangular"
-                                 data-logo_alignment="left">
-                            </div>
-                            <a class="d-none btn btn-outline-light w-100" href="javascript:;">
+                            <script src="https://apis.google.com/js/platform.js" async defer></script>
+                            <a class="btn btn-outline-light w-100" href="{{ route('auth.google') }}">
+                            <!--<a class="btn btn-outline-light w-100" href="{{ route('auth.google') }}&redirect_uri={{route('handleGoogleCallback')}}">-->
                                 <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
