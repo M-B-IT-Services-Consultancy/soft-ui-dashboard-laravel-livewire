@@ -47,16 +47,16 @@ class NewsletterSubscriptionController extends Controller
                 $existingSubscription->restore();
                 SendNewsletterSubscriptionConfirmation::dispatch($existingSubscription);
             }
+            return redirect(url()->previous().'#alert-msgs')
+                ->with('warning','Already subscribed!');
         } else {
             $subscription = NewsletterSubscription::create(['email'=>$data['email']]);
             SendNewsletterSubscriptionConfirmation::dispatch($subscription);
+            $this->email = $data['email'];
+            $this->notify(new NewsletterSubscriptionMail($data['email']));
+            return redirect()->back()
+            ->with('success', __('You will receive the latest news at :email', ['email' => $data['email']]));
         }
-        
-        $this->email = $data['email'];
-        $this->notify(new NewsletterSubscriptionMail($data['email']));
-        
-        return redirect()->back()
-            ->with('flash', __('You will receive the latest news at :email', ['email' => $data['email']]));
         //You will no longer receive our newsletter at :email
     }
 

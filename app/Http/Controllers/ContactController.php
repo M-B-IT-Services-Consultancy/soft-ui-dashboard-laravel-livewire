@@ -39,6 +39,5 @@ class ContactController extends Controller
             return redirect()->back()->with('error', 'Some error occured please try again!');
         }
         
-        
     }
 }

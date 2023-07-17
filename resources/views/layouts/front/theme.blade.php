@@ -95,29 +95,11 @@
                 @endif
             </div>
         </nav>
-
+        
         @yield('topsearch')
     </div>
     <!-- Navbar & Hero End -->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                @if(!empty($success))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                        {{ $success }}
-                    </div>
-                    @endif
-                @if(!empty($error))
-                    <div class="alert alert-warning">
-                        {{ $error }}
-                        {{ session('error') }}
-                    </div>
-                    @endif
-            </div>
-        </div>
-    </div>
     
      @yield('content')
 
@@ -147,15 +129,15 @@
                 <div class="col-lg-6 col-md-6">
                     <h4 class="text-white mb-3">Newsletter</h4>
                     <div class="position-relative mx-auto" >
-                        @if(session('flash'))
-                        <p class="text-success">{{ session('flash') }}</p>
-                        @endif
                         <form action="{{route('subscribe')}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <input class="required form-control border-primary w-100 py-3 ps-4 pe-5" name="email" type="text" placeholder="Your email">
                         <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
                         <!--<button type="submit">Subscribe</button>-->
                         </form>
+                        @if(session('flash'))
+                        <p class="text-success">{{ session('flash') }}</p>
+                        @endif
                     </div>
                 </div>
             </div>
