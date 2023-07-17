@@ -22,7 +22,8 @@
                     </div>
                     <div class="row px-xl-5 px-sm-4 px-3">
                         <div class="col-3 ms-auto px-1">
-                            <a class="btn btn-outline-light w-100" href="javascript:;">
+                            <a href="{{ url('login/facebook') }}" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                            <a class="d-none btn btn-outline-light w-100" href="javascript:;">
                                 <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink32">
                                     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -39,8 +40,14 @@
                             </a>
                         </div>
                         <div class="col-3 me-auto px-1">
+                            <a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google"><i class="fa fa-google"></i></a>
+                            <div id="g_id_onload"
+                                data-client_id="{{env('GOOGLE_CLIENT_ID')}}"
+                                   data-auto_select="true"
+                                   data-login_uri="{{ route('handleGoogleCallback') }}">
+                              </div>
                             <script src="https://apis.google.com/js/platform.js" async defer></script>
-                            <a class="btn btn-outline-light w-100" href="{{ route('auth.google') }}">
+                            <a class="d-none btn btn-outline-light w-100" href="{{ route('auth.google') }}">
                             <!--<a class="btn btn-outline-light w-100" href="{{ route('auth.google') }}&redirect_uri={{route('handleGoogleCallback')}}">-->
                                 <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

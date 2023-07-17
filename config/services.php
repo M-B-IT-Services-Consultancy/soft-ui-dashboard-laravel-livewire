@@ -33,7 +33,12 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_REDIRECT'),
+        'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'), //Facebook API
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'), //Facebook Secret
+        'redirect' => env('FACEBOOK_REDIRECT_URI'),
+     ],
 ];
