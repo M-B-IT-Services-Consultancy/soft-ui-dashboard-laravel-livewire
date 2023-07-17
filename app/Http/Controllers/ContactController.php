@@ -36,7 +36,7 @@ class ContactController extends Controller
         if($this->notify(new ContactusMail($data))){
             return redirect()->back()->with('success', 'Contact Form Submit Successfully');
         }else{
-            return redirect()->back()->with('error', 'Some error occured please try again!');
+            return redirect()->back()->with('warning', 'Thank you for contacting us! Our team will contact you asap.');
         }
         
     }
