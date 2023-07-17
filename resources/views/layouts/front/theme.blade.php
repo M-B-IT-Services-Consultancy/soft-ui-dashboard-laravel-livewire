@@ -103,9 +103,16 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                @if(session('flash'))
-                <p class="text-success">{{ session('flash') }}</p>
-                @endif
+                @if(!empty($success))
+                    <div class="alert alert-success">
+                        {{ $success }}
+                    </div>
+                    @endif
+                @if(!empty($error))
+                    <div class="alert alert-warning">
+                        {{ $error }}
+                    </div>
+                    @endif
             </div>
         </div>
     </div>

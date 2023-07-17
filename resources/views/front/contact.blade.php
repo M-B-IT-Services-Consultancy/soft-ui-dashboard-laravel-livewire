@@ -3,9 +3,6 @@
 
 @section("content")
 
-<!--<script src="https://www.google.com/recaptcha/api.js" nonce="{{ csp_nonce() }}"></script>-->
-    <!--<script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_KEY') }}" nonce="{{ csp_nonce() }}"></script>-->
-
 
 <div class="container-fluid bg-primary hero-header">
             <div class="container ">
@@ -118,10 +115,6 @@
     </div>
     <!-- Contact End -->
 
-<!-- <div class="form-group">
-                    <script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script><div class="g-recaptcha" theme="light" id="buzzNoCaptchaId_e2b52330cb39124ef34114d0c29cb013" data-sitekey="6Lc7R0MjAAAAAE-DjSGkHQb-fAo9GDqEP6t_19jw"></div>
-                                    </div>
-                <div>-->
 
 <script type="text/javascript">
     $('#contactUSForm').submit(function(event) {

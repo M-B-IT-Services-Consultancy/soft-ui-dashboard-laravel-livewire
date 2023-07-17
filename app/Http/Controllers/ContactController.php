@@ -28,12 +28,17 @@ class ContactController extends Controller
             'message' => 'required',
             'g-recaptcha-response' => ['required', new ReCaptcha]
         ]);
-  
+        
 //        $input = $request->all();
+        
         $data['data'] = ['name'=>$request->name,'email'=>$request->email,'phone'=>$request->phone,'message'=>$request->message];
         
-        $this->notify(new ContactusMail($data));
+        if($this->notify(new ContactusMail($data))){
+            return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
+        }else{
+            return redirect()->back()->with(['error' => 'Some error occured please try again!']);
+        }
         
-        return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
+        
     }
 }
