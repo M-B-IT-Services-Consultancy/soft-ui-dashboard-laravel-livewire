@@ -55,9 +55,13 @@ class Login extends Component
    {
        $userSocial = Socialite::driver($social)->user();
        $user = User::where(['email' => $userSocial->getEmail()])->first();
+//       var_dump($userSocial);
+//       var_dump($user);
+//       die;
        if($user){
            Auth::login($user);
-           return redirect()->action('HomeController@index');
+           return redirect()->intended('/dashboard');
+//           return redirect()->action('HomeController@index');
        }else{
            return view('auth.register',['name' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
        }

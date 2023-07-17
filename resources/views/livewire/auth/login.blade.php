@@ -7,7 +7,7 @@
                 <div class="col-lg-5 text-center mx-auto">
                     <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
                     <p class="text-lead text-white">
-                        {{ __('SASYou may sign in using your social account as well') }}
+                        {{ __('You may sign in using your social account as well') }}
                     </p>
                 </div>
             </div>
