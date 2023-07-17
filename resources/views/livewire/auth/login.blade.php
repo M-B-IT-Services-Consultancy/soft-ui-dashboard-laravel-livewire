@@ -44,7 +44,6 @@
                             
                             <script src="https://apis.google.com/js/platform.js" async defer></script>
                             <a class="d-none btn btn-outline-light w-100" href="">
-                            <!--<a class="btn btn-outline-light w-100" href="{{ route('auth.google') }}&redirect_uri={{route('handleGoogleCallback')}}">-->
                                 <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
