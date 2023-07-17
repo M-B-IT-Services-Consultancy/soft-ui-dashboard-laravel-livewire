@@ -51,10 +51,10 @@ Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
 
 // google social login
-Route::controller(GoogleController::class)->group(function(){
+//Route::controller(GoogleController::class)->group(function(){
     Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
     Route::get('auth/google/callback', 'handleGoogleCallback')->name('handleGoogleCallback');
-});
+//});
 
 Route::get('/login/{social}','App\Http\Livewire\Auth\Login@socialLogin')->where('social','facebook|google');
 Route::get('/login/{social}/callback','App\Http\Livewire\Auth\Login@handleProviderCallback')->where('social','facebook|google');
