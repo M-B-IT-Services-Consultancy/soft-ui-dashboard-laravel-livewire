@@ -56,6 +56,8 @@ Route::controller(GoogleController::class)->group(function(){
     Route::get('auth/google/callback', 'handleGoogleCallback')->name('handleGoogleCallback');
 });
 
+Route::get('/login/{social}','App\Http\Livewire\Auth\Login@socialLogin')->where('social','facebook|google');
+Route::get('/login/{social}/callback','App\Http\Livewire\Auth\Login@handleProviderCallback')->where('social','facebook|google');
 
 Route::get('email-test', function(){
 $details['email'] = 'brij.raj.singh2710@gmail.com';

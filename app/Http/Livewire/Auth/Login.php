@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Auth;
 
 use Livewire\Component;
 use App\Models\User;
+use Laravel\Socialite\Facades\Socialite;
 
 class Login extends Component
 {
@@ -35,6 +36,32 @@ class Login extends Component
             return $this->addError('email', trans('auth.failed')); 
         }
     }
+    
+     /**
+    * Handle Social login request
+    *
+    * @return response
+    */
+   public function socialLogin($social)
+   {
+       return Socialite::driver($social)->redirect();
+   }
+   /**
+    * Obtain the user information from Social Logged in.
+    * @param $social
+    * @return Response
+    */
+   public function handleProviderCallback($social)
+   {
+       $userSocial = Socialite::driver($social)->user();
+       $user = User::where(['email' => $userSocial->getEmail()])->first();
+       if($user){
+           Auth::login($user);
+           return redirect()->action('HomeController@index');
+       }else{
+           return view('auth.register',['name' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
+       }
+   }
 
     public function render()
     {
