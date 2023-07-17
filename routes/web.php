@@ -52,8 +52,8 @@ Route::get('/login', Login::class)->name('login');
 
 // google social login
 //Route::controller(GoogleController::class)->group(function(){
-    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
-    Route::get('auth/google/callback', 'handleGoogleCallback')->name('handleGoogleCallback');
+//    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+//    Route::get('auth/google/callback', 'handleGoogleCallback')->name('handleGoogleCallback');
 //});
 
 Route::get('/login/{social}','App\Http\Livewire\Auth\Login@socialLogin')->where('social','facebook|google');
