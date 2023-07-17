@@ -41,11 +41,7 @@
                         </div>
                         <div class="col-3 me-auto px-1">
                             <a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google"><i class="fa fa-google"></i></a>
-                            <div id="g_id_onload"
-                                data-client_id="{{env('GOOGLE_CLIENT_ID')}}"
-                                   data-auto_select="true"
-                                   data-login_uri="{{ route('handleGoogleCallback') }}">
-                              </div>
+                            
                             <script src="https://apis.google.com/js/platform.js" async defer></script>
                             <a class="d-none btn btn-outline-light w-100" href="{{ route('auth.google') }}">
                             <!--<a class="btn btn-outline-light w-100" href="{{ route('auth.google') }}&redirect_uri={{route('handleGoogleCallback')}}">-->
