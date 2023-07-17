@@ -105,12 +105,14 @@
             <div class="col-12">
                 @if(!empty($success))
                     <div class="alert alert-success">
+                        {{ session('success') }}
                         {{ $success }}
                     </div>
                     @endif
                 @if(!empty($error))
                     <div class="alert alert-warning">
                         {{ $error }}
+                        {{ session('error') }}
                     </div>
                     @endif
             </div>
