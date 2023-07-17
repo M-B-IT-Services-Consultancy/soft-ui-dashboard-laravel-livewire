@@ -23,7 +23,7 @@ class ContactController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email:rfc,dns',
             'phone' => 'required|digits:10|numeric',
             'message' => 'required',
             'g-recaptcha-response' => ['required', new ReCaptcha]

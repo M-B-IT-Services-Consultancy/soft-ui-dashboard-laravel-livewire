@@ -38,6 +38,7 @@
     
     @livewireStyles(['nonce' => csp_nonce() ])
 
+    <meta name="google-signin-client_id" content="{{ env('GOOGLE_CLIENT_ID') }}">
 
 </head>
 

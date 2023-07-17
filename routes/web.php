@@ -19,6 +19,7 @@ use App\Http\Livewire\Wizard;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterSubscriptionController;
+use App\Http\Controllers\GoogleController;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 use App\Http\Livewire\LaravelExamples\UserManagement;
@@ -49,10 +50,11 @@ Route::get('/faq', [HomeController::class,'faq'])->name('faq');
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
 
-Route::get('/google-login', function(Request $request){
-    print_r($request->all());
-    die;
-})->name('google-login');
+// google social login
+Route::controller(GoogleController::class)->group(function(){
+    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+    Route::get('auth/google/callback', 'handleGoogleCallback')->name('handleGoogleCallback');
+});
 
 
 Route::get('email-test', function(){
