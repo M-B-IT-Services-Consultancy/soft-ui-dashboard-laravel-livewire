@@ -4,7 +4,7 @@
 @section("content")
 
 <!--<script src="https://www.google.com/recaptcha/api.js" nonce="{{ csp_nonce() }}"></script>-->
-    <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_KEY') }}" nonce="{{ csp_nonce() }}"></script>
+    <!--<script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHA_KEY') }}" nonce="{{ csp_nonce() }}"></script>-->
 
 
 <div class="container-fluid bg-primary hero-header">
