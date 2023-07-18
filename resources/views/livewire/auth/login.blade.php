@@ -20,7 +20,7 @@
                     <div class="card-header text-center pt-4">
                         <h5>{{ __('Login with') }}</h5>
                     </div>
-                    <div class="row px-xl-5 px-sm-4 px-3">
+                    <div class="row px-xl-5 px-sm-4 px-3 d-none">
                         <div class="col-3 ms-auto px-1">
                             <a href="{{ url('login/facebook') }}" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
                             <a class="d-none btn btn-outline-light w-100" href="javascript:;">

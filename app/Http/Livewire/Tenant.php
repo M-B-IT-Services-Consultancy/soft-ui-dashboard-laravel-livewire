@@ -27,7 +27,8 @@ class Tenant extends Component
     public $tenant_ni_number_img = '';
     public $prop_issues = array(1=>'Rent arrears',2=>'Subletting',3=>'Behavior',4=>'Late payment',5=>'Farming',6=>'Drugs'); //Rent arrears =>1 Subletting=>2 Behavior=>3 Late payment => 4 Farming => 5 Drugs => 6
     public $tenants;
-    
+    public $tenant;
+
     public $showSuccesNotification = false; 
     public $showFailureNotification = false;
 
@@ -68,7 +69,13 @@ class Tenant extends Component
         }
     }
     
-    
+    public function showTenant($id){
+        die('m here');
+        $tenant = Tenant::find(base64_decode($id));
+        $this->tenant = $tenant;
+        $this->emit('tenant', $tenant->id);
+    }
+
     public function render()
     {
         return view('livewire.tenant')->with('prop_issues',$this->prop_issues);

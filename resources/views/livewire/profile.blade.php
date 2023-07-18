@@ -25,7 +25,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+            <div class="d-none col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
                 <div class="nav-wrapper position-relative end-0">
                     <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
                         <li class="nav-item">
@@ -119,7 +119,7 @@
 </div>
 <div class="container-fluid py-4">
     <div class="row">
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 d-none">
             <div class="card h-100">
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-0">Platform Settings</h6>
@@ -179,7 +179,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 d-none">
             <div class="card h-100">
                 <div class="card-header pb-0 p-3">
                     <div class="row">
@@ -226,7 +226,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 d-none">
             <div class="card h-100">
                 <div class="card-header pb-0 p-3">
                     <h6 class="mb-0">Conversations</h6>
@@ -291,8 +291,8 @@
         <div class="col-12 mt-4">
             <div class="card mb-4">
                 <div class="card-header pb-0 p-3">
-                    <h6 class="mb-1">Projects</h6>
-                    <p class="text-sm">Architects design houses</p>
+                    <h6 class="mb-1">Dodgy Tenants</h6>
+                    <p class="text-sm">My added dodgy tenants</p>
                 </div>
                 <div class="card-body p-3">
                     <div class="row">
@@ -314,7 +314,7 @@
                                     <p class="mb-4 text-sm">
                                         As Uber works through a huge amount of internal management turmoil.
                                     </p>
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between d-none">
                                         <button type="button" class="btn btn-outline-primary btn-sm mb-0">View
                                             Project</button>
                                         <div class="avatar-group mt-2">
@@ -358,7 +358,7 @@
                                     <p class="mb-4 text-sm">
                                         Music is something that every person has his or her own specific opinion about.
                                     </p>
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between d-none">
                                         <button type="button" class="btn btn-outline-primary btn-sm mb-0">View
                                             Project</button>
                                         <div class="avatar-group mt-2">
@@ -402,7 +402,7 @@
                                     <p class="mb-4 text-sm">
                                         Different people have different taste, and various types of music.
                                     </p>
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between d-none">
                                         <button type="button" class="btn btn-outline-primary btn-sm mb-0">View
                                             Project</button>
                                         <div class="avatar-group mt-2">

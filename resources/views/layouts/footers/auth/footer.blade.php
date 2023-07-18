@@ -9,19 +9,21 @@
             <div class="col-lg-6">
                 <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-muted" target="_blank">About</a>
+                        <a href="{{ route('home') }}" class="nav-link text-muted">Home</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-muted"
-                            target="_blank">About Us</a>
+                        <a href="{{ route('about') }}" class="nav-link text-muted"
+                            >About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-muted" target="_blank">Blog</a>
+                        <a href="{{ route('contact') }}" class="nav-link text-muted">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link pe-0 text-muted"
-                            target="_blank">License</a>
+                        <a href="{{ route('terms')}}" class="nav-link pe-0 text-muted">Terms of use</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('privacy-policy')}}" class="nav-link pe-0 text-muted">Privacy Policy</a>
                     </li>
                 </ul>
             </div>

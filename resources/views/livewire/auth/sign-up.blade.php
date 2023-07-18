@@ -20,7 +20,7 @@
                       <div class="card-header text-center pt-4">
                           <h5>{{ __('Register with') }}</h5>
                       </div>
-                      <div class="row px-xl-5 px-sm-4 px-3">
+                      <div class="row px-xl-5 px-sm-4 px-3 d-none">
                           <div class="col-3 ms-auto px-1">
                               <a class="btn btn-outline-light w-100" href="javascript:;">
                                   <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1"
