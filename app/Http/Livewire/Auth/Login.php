@@ -29,7 +29,6 @@ class Login extends Component
         if(auth()->attempt(['email' => $this->email, 'password' => $this->password], $this->remember_me)) {
             $user = User::where(["email" => $this->email])->first();
             auth()->login($user, $this->remember_me);
-//            echo redirect()->intended('/dashboard');die;
             return redirect()->intended('/dashboard');        
         }
         else{
@@ -53,14 +52,44 @@ class Login extends Component
     */
    public function handleProviderCallback($social)
    {
-       $userSocial = Socialite::driver($social)->user();
-       $user = User::where(['email' => $userSocial->getEmail()])->first();
-       if($user){
-           Auth::login($user);
-           return redirect()->action('HomeController@index');
-       }else{
-           return view('auth.register',['name' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
-       }
+       try{
+            $userSocial = Socialite::driver($social)->user();
+            $user = User::where(['email' => $userSocial->getEmail()])->first();
+            $finduser = User::where('social_id', $userSocial->id)->first();
+
+            if($finduser){
+      
+                Auth::login($finduser);
+     
+                return redirect()->intended('/dashboard');
+      
+            }else{
+                $newUser = User::create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'social_id'=> $user->id,
+                    'social_type'=> 'google',
+                    'password' => encrypt('my-google')
+                ]);
+     
+                Auth::login($newUser);
+      
+                return redirect()->intended('/dashboard');
+            }
+     
+        } catch (Exception $e) {
+            redirect(url()->previous().'#alert-msgs')
+                ->with('warning',$e->getMessage());
+            
+        }
+//       if($user){
+//           Auth::login($user);
+//           return redirect()->intended('/dashboard');
+////           return redirect()->action('HomeController@index');
+//       }else{
+//           return view('auth.register',['name' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
+//       }
+       
    }
 
     public function render()

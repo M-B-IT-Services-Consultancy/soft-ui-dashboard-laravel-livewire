@@ -14,6 +14,7 @@ use App\Http\Livewire\StaticSignIn;
 use App\Http\Livewire\StaticSignUp;
 use App\Http\Livewire\Rtl;
 use App\Http\Livewire\Tenant;
+use App\Http\Livewire\ShowTenantRatingDetails;
 use App\Http\Livewire\Property;
 use App\Http\Livewire\Wizard;
 use App\Http\Controllers\HomeController;
@@ -59,11 +60,12 @@ Route::get('/login', Login::class)->name('login');
 Route::get('/login/{social}','App\Http\Livewire\Auth\Login@socialLogin')->where('social','facebook|google');
 Route::get('/login/{social}/callback','App\Http\Livewire\Auth\Login@handleProviderCallback')->where('social','facebook|google');
 
-Route::get('email-test', function(){
-$details['email'] = 'brij.raj.singh2710@gmail.com';
-dispatch(new App\Jobs\SendNewsletterSubscriptionConfirmation($details));
-dd('done');
-});
+Route::get('/ShowTenantRatingDetails/{id}', ShowTenantRatingDetails::class)->name('ShowTenantRatingDetails');
+//Route::get('/showTenant', function(){
+//$details['email'] = 'brij.raj.singh2710@gmail.com';
+////dispatch(new App\Jobs\SendNewsletterSubscriptionConfirmation($details));
+//dd('done');
+//});
 
 Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-password');
 
@@ -89,6 +91,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/laravel-user-profile', UserProfile::class)->name('user-profile');
     Route::get('/laravel-user-management', UserManagement::class)->name('user-management');
     Route::get('/tenants', Tenant::class)->name('tenants');
+    Route::get('/showTenant/{id}', Tenant::class)->name('showTenant');
     Route::get('/property', Property::class)->name('property');
     Route::get('/wizard', Wizard::class)->name('wizard');
     

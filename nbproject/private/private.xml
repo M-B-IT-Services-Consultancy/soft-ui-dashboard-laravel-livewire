@@ -2,6 +2,39 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Actions/Fortify/CreateNewUser.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/Auth/Login.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/routes/web.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/NewsletterSubscriptionController.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_09_091803_create_rating_comments_table.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/TenantRating.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/.env</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Rules/ReCaptcha.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/app.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_17_074808_add_google_id_column.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/base.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Livewire/SearchTenant.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Http/Controllers/ContactController.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/config/services.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/home.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/navbars/auth/sidebar.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/Tenant.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/flash-message.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/wizard.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/sign-up.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/auth/login.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/auth/login.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/front/contact.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/app/Models/User.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_07_113544_google_social_auth_id.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/livewire/search-tenant.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/.gitignore</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/resources/views/layouts/front/theme.blade.php</file>
+            <file>file:/Users/brijrajsingh/phpdev/dodgy/database/migrations/2023_07_17_165032_add_social_login_field.php</file>
+        </group>
     </open-files>
 </project-private>
